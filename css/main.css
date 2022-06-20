@@ -1,0 +1,1297 @@
+/* variables */
+:root {
+    /* Color */
+    --main-color: #2cbeff;
+    --drk-white: #777;
+    /* Background-color */
+    --main-bg-color:#CCC;
+    --main-bg-color:#EEE;
+    /* Padding*/
+    --padding-section: 100px;
+    --padding-element: 10px;
+    /* Margin*/
+    --margin-y: 10px;
+    --margin-x: 10px;
+    --main-margin: 10px;
+    /* Custom rates skills*/
+    --adbe-rate: 50%;
+    --html-css-rate: 80%;
+    --js-rate: 50%;
+    --php-rate: 10%;
+}
+
+/* global rules */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    /* love fonts oswald as well*/
+}
+html {
+    scroll-behavior: smooth;
+}
+ul {
+    list-style: none;
+}
+.container {
+    margin: 0 auto;
+    padding: 0 10px;
+    /* width: 100%; */
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.463);
+}
+/* small */
+@media(min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+/* medium */
+@media(min-width: 992px){
+    .container {
+        width: 970px;
+    }
+}
+/* large */
+@media(min-width: 1200px){
+    .container {
+        width: 1170px;
+    }
+}
+/* *start section-header */
+div.section {
+    padding: 30px 0;
+    min-height: 100vh;
+}
+div.section .section-header {
+    /* width: 50%; */
+    margin: 0 auto 100px;
+    padding: 20px 10px;
+}
+div.section .section-heading {
+    text-align: center;
+    font-size: 40px;
+    text-transform: capitalize;
+    font-family: "Open Sans";
+    font-weight: normal;
+    color: black;
+}
+div.section .section-header .section-heading + span.line {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius:50%;
+    border: 2px solid #2189b57d;
+    /* background-color: #2cbeff; */
+    margin: 20px auto;
+    position: relative;
+}
+div.section .section-header .section-heading + span.line::before {
+    content: '';
+    position: absolute;
+    right: calc(100% + 2px);
+    top: 50%;
+    width: 30px;
+    height: 2px;
+    background-color: black;
+}
+div.section .section-header .section-heading + span.line::after {
+    content: '';
+    /* position: absolute;
+    left: calc(100% + 3px);
+    top: 50%; */
+    width: 30px;
+    height: 2px;
+    background-color: black;
+    display: block;
+    margin-top: 50%;
+    margin-left: calc(100% + 2px);
+}
+div.section .section-header .section-heading + span + p.section-desc,
+div.section .section-header .section-heading + p.section-desc {
+    font-size: 17px;
+    margin: 0 auto;
+    max-width: 500px;
+    text-align: center;
+    color: rgb(0 0 0 / 40%);
+}
+/* *end section-header */
+/* * header */
+.header {
+    /* background-color: rgb(146, 147, 147); */
+    background-color: transparent;
+    /* new technique to make position element take original width, no shrink fit-content*/
+    
+    position: absolute;
+    /* left: 0; */
+    width: 100%;
+    z-index: 3; /* vid4 (7:14) */
+}
+.header .container {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    min-height: 76.1px;
+    /* z-index: 13; */
+    /* height: 100px; */
+    /* justify-content: space-between; */
+    /* padding: 30px 0; */
+    /* border-bottom: 2px solid aliceblue; */
+}
+.header .container::after {
+    content: '';
+    height: 1px;
+    width: calc(100% - 20px); /* to remove padding area and be same only acutal width */
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    left: 10px; /* to begin with after padding */
+    bottom: 0;
+}
+.header .container img {
+    height: 40px;
+}
+@media(max-width: 250px) {
+    .header .container img {
+        height: 30px;
+    }
+}
+.header .container .links-tools {
+    display: flex;
+    flex: 1;
+    gap: 17px;
+    justify-content: flex-end;
+    align-items: center;
+}
+.header .container .links-tools .menu{ /* redundant style */
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: right;
+    display: none;
+    visibility: hidden;
+}
+@media(max-width: 813.600px) {
+    .header .container .links-tools .menu {
+        display: block; /*مش لازم يكون بلوك اي نوع من العرض ينفع بس يلغي ال none*/
+        visibility: visible;
+    }
+    .header .container .links-tools .menu.active + ul {
+        display: flex;
+        visibility: visible;
+    }
+}
+.header .container .links-tools ul {
+    display: flex;
+}
+.header .container .links-tools ul li {
+    
+}
+.header .container .links-tools ul li a  {
+    display: block;
+    padding: 30px 10px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+    position: relative;
+    z-index: 3; /* including ::after, ::before */
+}
+.header .container .links-tools ul li a::after  {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background-color: var(--main-color);
+    transition: 0.3s;
+}
+.header .container .links-tools a.active::after,
+.header .container .links-tools a.active,
+.header .container .links-tools a:hover::after,
+.header .container .links-tools a:hover {
+    width: 100%;
+    color: var(--main-color);
+}
+/* media for -> ul, li, a*/
+@media(max-width: 813.600px) {
+    .header .container .links-tools ul {
+        display: none;
+        visibility: hidden;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(52, 50, 50, 0.674);
+        position: absolute;
+        top: calc(100%);
+        right: 0;
+    }
+    .header .container .links-tools ul li a {
+        color: #2cbeff;
+    }
+    .header .container .links-tools ul li a:hover {
+        padding-left: 40px;
+    }
+}
+.header .container .links-tools .search,
+.header .container .links-tools .menu {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: right;
+    border-left: 1px solid aliceblue;
+}
+/* .menu and .search has some same style*/
+@media(max-width: 355px) {
+    .header .container .links-tools .menu {
+        
+    }
+    .header .container .links-tools .search {
+        
+    }
+}
+.header .container .links-tools i {
+    color: #2cbeff;
+    /* display: block; */
+    /* padding: 10px; */
+}
+/* *landing */
+main.landing {
+    background-image: url(../images/landing.jpg);
+    background-size: cover;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+main.landing .intro-landing {
+    background-color: #2189b57d;
+    color: aliceblue;
+    width: 50%;
+    /*
+        relative to make body has height!
+        because if absolute so body has height = 0!
+        realtive keep his place in flow document
+    */
+    position: relative;
+    padding: 60px;
+    display: flex;
+    justify-content: flex-end;
+}
+@media(max-width:759.200px) {
+    main.landing .intro-landing {
+        width: 100%;
+        padding: 10px 30px;
+    }
+}
+@media(max-width: 884.4px) {
+    main.landing .intro-landing {
+        font-size: 20px !important;
+        padding: 30px;
+    }
+}
+main.landing .intro-landing .txt {
+    max-width: 500px;
+}
+@media(max-width:759.200px) {
+    main.landing .intro-landing .txt {
+        width: 100%;
+    }
+}
+main.landing .intro-landing h2 {
+    font-size: 30px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+main.landing .intro-landing p {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+@media(max-width:441.6px) {
+    main.landing .intro-landing {
+        
+    }
+    main.landing .intro-landing h2 {
+        font-size:25px ;
+        line-height: 1;
+    }
+    main.landing .intro-landing p {
+        font-size:17px ;
+        line-height: 1.3;
+    }
+
+}
+@media(max-width:362.4px) {
+    main.landing .intro-landing {
+        padding: 20px;
+    }
+    main.landing .intro-landing h2{
+        font-size: 0.8em;
+    }
+    main.landing .intro-landing p{
+        font-size: .7em;
+    }
+}
+/* main.landing .intro-landing::before {
+    content: '';
+    position: absolute;
+    left: -40px;
+    display: block;
+    width: 40px;
+    height: 100%;
+    background-color: #259bcd;
+    
+} */
+
+main.landing .chng-background {
+    color: #2cbeff;
+    background-color: aliceblue;
+    border-radius: 50%;
+    padding: 5px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+@media(max-width:441.6px) {
+    main.landing .chng-background {
+        color: #2cbeff;
+        z-index: 100;
+    }
+    .chng-background.fa-arrow-left-long {
+        left: 0 !important;
+    }
+    .chng-background.fa-arrow-right-long {
+        right: 0 !important;
+    }
+}
+main.landing .chng-background.fa-arrow-left-long {
+    left: 30px;
+}
+main.landing .chng-background.fa-arrow-right-long {
+    right: 30px;
+}
+main.landing ul {
+    /* background-color: #2cbeff; */
+    list-style: none;
+    display: flex;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+main.landing ul li {
+    background-color: aliceblue;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+}
+main.landing ul li.active {
+    margin: 0 10px;
+    background-color: #2cbeff;
+}
+
+/* *services */
+div.services {
+    background-color: #fefefe;
+}
+div.services .container {
+
+}
+div.services .container .srv-contents {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px ,1fr));
+    gap: 10px;
+    /* background-color: rgba(240, 248, 255, 0.591); */
+}
+@media(max-width: 770.4px ) {
+    div.services .container .srv-contents {
+        grid-template-columns: 1fr;
+    }
+}
+.services .container .srv-contents .srv-box {
+    padding: 10px;
+    display: flex;
+    /* border: 1px solid rgb(0, 136, 255); */
+    /* align-items: baseline; */
+}
+@media(max-width: 770.4px ) {
+    .services .container .srv-contents .srv-box {
+        flex-direction: column;
+        align-items: center;
+    }
+    .services .container .srv-contents .srv-box .text {
+        text-align: center;
+    }
+}
+.services .container .srv-contents .srv-box i {
+    flex-basis:1.7em;
+}
+.services .container .srv-contents .srv-box .text {
+    flex: 1;
+}
+.services .container .srv-contents .srv-box .text h3 {
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    color: #2cbeff;
+}
+.services .container .srv-contents .srv-box .text p {
+    line-height: 1.7;
+    color: #777;
+}
+/* *design section */
+div.design {
+
+}
+
+div.design .design-content {
+    background-image: url(../images/design-features.jpg);
+    width: 100%;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    z-index: -1;
+    /* height: 100%; */
+    /* justify-content: space-between; */
+    /* z-index: 10000; not affect */
+}
+div.design-content::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.532);
+}
+div.design .design-content div.img {
+    position: inherit;
+    /* width: 50%; */
+    flex: 1;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+div.design .design-content div.img img {
+    position: relative;
+    bottom: -60px;
+}
+div.design .design-content .txt {
+    position: inherit;
+    align-self: center;
+    background-color: #2189b57d;
+    color: aliceblue;
+    padding: 60px;
+    display: flex;
+    /* width: 50%; */
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+@media(max-width: 775px) {
+    div.design .design-content div.img {
+        display: none;
+        visibility: hidden;
+    }
+    /* div.design .design-content .txt { if you used width: 50% no flex: 1
+        width: 100%;
+        padding: 30px 10px;
+    } */
+    div.design .design-content .txt {
+        line-height: 1.3;
+    }
+}
+div.design .design-content .txt h3 {
+    margin-bottom: 30px;
+}
+div.design .design-content .txt ul {
+
+}
+div.design .design-content .txt ul i {
+    font-size: 1.2rem;
+    padding-right: 10px;
+}
+div.design .design-content .txt ul li {
+    font-size: 1.2rem;
+    padding: 10px 0;
+}
+/* div.design .design-content .txt ul li:before { if you want using icon here in CSS instead <i> in html
+    font-family: "Font Awesome 5 Free";
+    content: '[uniquecodes]';
+    font-weight: 200;
+} */
+
+/* *portfolio */
+.portfolio {
+    /* background-color: #e7e7e7; */
+}
+
+.portfolio .container ul.shuffle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 70px;
+}
+.portfolio .container ul.shuffle li {
+    text-transform: capitalize;
+    letter-spacing: -1px;
+    /* design alzero not needed letter space and his design very responsive and cool!*/
+    padding: 10px;
+}
+.portfolio .container ul.shuffle li.active {
+    background-color: #2cc0ff69;
+}
+.portfolio .img-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.portfolio .img-container .box {
+    /* width: calc(25% - 5px); */
+    border: 1px solid #2cbeff;
+    position: relative;
+    overflow: hidden;
+}
+@media(min-width: 768px) {
+    .portfolio .img-container .box {
+        width: 50%;
+    }
+}
+@media(min-width: 1199px) {
+    .portfolio .img-container .box {
+        width: 25%;
+    }
+}
+.portfolio .img-container .box img{
+    max-width:100%;
+    transition: 0.3s;
+}
+.portfolio .img-container .box:hover img {
+    transform: rotate(10deg) scale(1.2);
+}
+.portfolio .img-container .box .caption{
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    line-height: 30px;
+    position: absolute;
+    width: 100%;
+    bottom: -100%;
+    transition: 0.3s;
+}
+.portfolio .img-container .box:hover .caption {
+    bottom: 0;
+}
+.portfolio .img-container .box .caption h4 {
+    text-transform: capitalize;
+    font-weight: normal;
+    font-size: 18px;
+}
+.portfolio .img-container .box .caption p {
+    text-transform: capitalize;
+    font-weight: normal;
+    color: #2cbeff;
+}
+.portfolio .more {
+    text-transform: uppercase;
+    width: fit-content;
+    color: aliceblue;
+    display: block;
+    margin: 20px auto 0;
+    text-decoration: none;
+    padding: 20px;
+    background: #2cbeff;
+    transition: 0.3s;
+    position: relative;
+}
+.portfolio .more:hover {
+    transform: scale(1.1);
+    /* عاوز لما اعمل هوفر يحصل ان في انيميشن لبوردر بيتحرك علي الحواف وبيتلون*/
+    /* border-width: 13px;
+    border-style: solid;
+    border-image-slice: 1;
+    border-image: linear-gradient(to right, #260B3C, #a053df); */
+}
+.portfolio .more:hover::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    
+}
+
+/* Video */
+div.video {
+    position: relative;
+    background-color: #2cbeff;
+    height: fit-content;
+}
+.video video {
+    width:100% ;
+    height: 100%;
+    position: relative;
+}
+.video .text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    padding: 20px;
+    background-color: #2cc0ff92;
+    text-align: center;
+}
+/* @media(max-width: 662.4px) {
+    .video video {
+        display: none;
+        visibility: hidden;
+    }
+    .video .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 70%;
+        top: 100%;
+    }
+} */
+.video .text h2 {
+    text-transform: uppercase;
+    font-size: 30px;
+}
+.video .text p {
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px 0;
+    font-style: italic;
+}
+.video .text button {
+    border: none;
+    background-color: #000;
+    color: #FFF;
+    padding: 20px;
+    text-transform: capitalize;
+    border-top-right-radius: 15%;
+    border-bottom-left-radius: 15%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.video .text button:hover {
+    transform: scale(1.1);
+    background-color: #333;
+}
+
+/* about */
+div.section.about {
+    min-height: 70vh;
+    /* position: relative; */
+    padding-bottom: 0;
+}
+div.section.about .section-header {
+    margin: 0; /*this*/
+}
+.about .img {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.about .img img{
+    position: relative;
+    bottom: -100px;
+    /* margin-top: -100px; or this (to remove empty space above him) */
+    /* aspect-ratio: 16 / 9; */
+}
+
+/* *statistics */
+.statistics {
+    min-height: 50vh;
+    background-image: url(../images/shuffle-01.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media (max-width: 768.4px) {
+    .statistics  {
+        display: block;
+    }
+}
+div.statistics::before {
+    content: '';
+    position: absolute;
+    background-color:rgba(0, 0, 0, 0.674) ;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.statistics .container {
+    color: white;
+    position: relative;
+}
+@media(min-width: 808px) {
+    .statistics .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr ));
+        /* flex-wrap: wrap; */
+        gap: 10px;
+    }
+}
+.statistics .container .box {
+    /* text-align: center; for inline, inline-blocks */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #2cc0ff89;
+}
+.statistics .container .box i {
+    width: fit-content; /*make element block not inline*/
+    background-color: #000;
+    border-radius: 50%;
+    padding: 10px;
+}
+.statistics .container .box span[class^="no"] {
+    font-size: 40px;
+}
+.statistics .container .box span:nth-child(2) {
+    margin: 10px 0;
+}
+
+/* *double-section */
+.double-section {
+    /* background-color: rgba(0, 0, 0, 0.219); */
+}
+.double-section .container {
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    /* background-color: rgba(51, 51, 51, 0.542); */
+}
+@media(max-width: 1013.2px) {
+    .double-section .container {
+        flex-direction: column;
+    }
+}
+.double-section .container .section-header {
+    margin: 0 0 17px;
+}
+.double-section .container .section-header .section-heading {
+    font-weight: normal;
+    font-size: 25px;
+    margin-bottom: 17px;
+}
+.double-section .container > div {
+}
+@media(min-width: 1000px) {
+    .double-section .container > div {
+        /* flex: 1; */
+        flex-basis: 45%;
+    }
+}
+.double-section .testmonial .content-testmo {
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+}
+.double-section .testmonial .content-testmo .testm-box {
+    display: flex;
+    /* justify-content: baseline; */
+    width: 90%;
+    padding: 10px;
+    /* margin: 30px 0; */
+}
+.double-section .testmonial .content-testmo .testm-box::after {
+}
+.double-section .testmonial .content-testmo .testm-box img {
+    border-radius: 50%;
+    height: 100px;
+    margin-right: 30px;
+    flex: 1;
+}
+.double-section .testmonial .content-testmo .testm-box .text {
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid rgb(183, 183, 183);
+}
+/*.double-section .testmonial .content-testmo .testm-box .text::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: white;
+}*/
+.double-section .testmonial .content-testmo .testm-box .text p {
+}
+.double-section .testmonial .content-testmo .testm-box .text span {
+    justify-self: flex-end;
+    align-self: flex-end;
+    color: #AAA;
+    margin: 7px 0;
+}
+.double-section .testmonial .switch {
+    /* margin: 30px 0; */
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    margin-bottom: 17px;
+}
+.double-section .testmonial .switch span {
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid rgb(92, 92, 92);
+}
+.double-section .testmonial .switch span.active {
+    background-color: #2cbeff;
+}
+/* > skills */
+.double-section .skills .skills-bars {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 70px;
+}
+.double-section .skills .skills-bars .bar-pkg h4 {
+    text-transform: uppercase;
+    font-weight: normal;
+}
+.double-section .skills .skills-bars .bar-pkg .bar {
+    height: 30px;
+    background-color: #777;
+}
+.double-section .skills .skills-bars .bar-pkg .bar span{
+    display: block;
+    height: 100%;
+    background-color: #2cbeff;
+    position: relative;
+}
+.double-section .skills .skills-bars .bar-pkg .bar span::before{
+    content: attr(data-progress);
+    position: absolute;
+    left: calc(100% + -10px);
+    bottom: calc(100% + 20px);
+    background-color: #333;
+    color: white;
+    padding: 3px;
+    border-radius: 4px;
+}
+.double-section .skills .skills-bars .bar-pkg .bar span::after{
+    content: '';
+    position: absolute;
+    border-width: 10px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+    left: calc(100%);
+    bottom: calc(100%);
+}
+/* Write your skills here */
+.double-section .skills .skills-bars .bar-pkg .adobe span {
+    width: var(--adbe-rate);
+}
+.double-section .skills .skills-bars .bar-pkg .html-css span {
+    width: var(--html-css-rate);
+}
+.double-section .skills .skills-bars .bar-pkg .js span {
+    width: var(--js-rate);
+}
+.double-section .skills .skills-bars .bar-pkg .php span {
+    width: var(--php-rate);
+}
+
+/*
+    Things i have not finish yet
+    1- Media Query for Statistics, Skills
+    2- Skills bar style
+*/
+
+/* *quote */
+.quote {
+    background-image: url(../images/quote.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 100px 0;
+    color: white;
+    position: relative;
+    text-align: center;
+}
+.quote::before {
+    content: '';
+    /* display: inline-block; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0 0 0 / 70%  );
+    width: 100%;
+    height: 100%;
+}
+.quote .container {
+    position: relative;
+}
+.quote p {
+    font-size: 25px;
+    font-weight: normal;
+    margin: 10px 0;
+}
+.quote p::before {
+    /* content: '"'; */
+    content: '\f10d';
+    font-family: "Font Awesome 6 Free";
+    font-weight: 700;
+    /* sometimes icons needss font-weight to works well */
+    font-size: 30px;
+    /* color: var(--main-color); */
+}
+.quote p::after {
+    /* content: '"'; */
+    content: '\f10e';
+    font-family: "Font Awesome 6 Free";
+    font-weight: 700;
+    font-size: 30px;
+    /* color: var(--main-color); */
+}
+.quote span {
+    text-transform: uppercase;
+    color: #CCC;
+}
+
+/* Pricing */
+
+.pricing {
+    /* background-color: var(--main-bg-color); */
+}
+div.pricing .section-header {
+    margin-bottom: 20px;
+}
+div.pricing div.container {
+    /* background-color: #AAA; */
+    display: grid;
+    grid-template-columns: repeat( auto-fill, minmax(250px, 1fr) );
+    /* on tablet there 3 boxes, iwant 2 / 2 no 3 / 1  */
+}
+div.pricing div.container .price-model {
+    text-align: center;
+    padding: 20px;
+    /* border: 1px solid black; */
+    /* display: flex;
+    flex-direction: column; */
+}
+/* poart 1 */
+div.pricing div.container .price-model .plan {
+    padding: 30px 0;
+    line-height: 1.7;
+    border-style: solid;
+    border-width: 1px 0; 
+    border-color: var(--main-color);
+}
+div.pricing div.container .price-model .price-type {
+    text-transform: uppercase;
+    font-size: 19px;
+    font-weight: normal;
+}
+div.pricing div.container .price-model .price {
+    font-size: 60px;
+    font-weight: 900;
+}
+    /*
+    not sense to make sign "$" and "/Mo" by ::before, after
+    because if you want change it Programmerly you can't access to CSS file
+    but you can access in HTML File
+    So you prefer do span.before, span.after
+    */
+div.pricing div.container .price-model .price::before {
+    content: '$';
+    font-size: 25px;
+    font-weight: 300;
+    position: relative;
+    top: -27px;
+    left: -17px;
+    margin-right: 15px;
+
+}
+div.pricing div.container .price-model .price::after {
+    content: '/Mo';
+    font-size: 17px;
+    position: relative;
+    right: -17px;
+}
+/* part 2*/
+div.pricing div.container .price-model .features {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--main-color);
+}
+div.pricing div.container .price-model .features p {
+    /* margin: 30px 0; */
+    padding: 20px;
+    text-transform: capitalize;
+    border-bottom: 1px solid var(--main-color);
+}
+div.pricing div.container .price-model .features p:last-of-type {
+    border: none;
+}
+div.pricing div.container .price-model .buy-btn {
+    text-transform: capitalize;
+    font-weight: normal;
+    /* width: 70px;
+    height: 70px; */
+    padding: 20px;
+    border: 1px solid #2cbeff;
+    background-color: transparent;
+    margin: 20px 0;
+    cursor: pointer;
+    /* you can apply many effec on btn like fill, animation, ...*/
+}
+/* part3 */
+div.pricing .text {
+    margin: 10px 0;
+    /* background-color: #EEE; */
+    text-align: center;
+    padding: 10px;
+}
+div.pricing .text p {
+    font-size: 20px;
+    color: #777;
+}
+div.pricing .text a {
+    text-decoration: none;
+    display: block;
+    padding: 20px;
+    width: fit-content;
+    margin: 20px auto;
+    background-color: var(--main-color);
+    color: white;
+    text-transform: capitalize;
+}
+
+/* *subscribe */
+.subscribe {
+    padding: 100px 0;
+    background-image: url(../images/subscribe.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    color: white;
+}
+.subscribe::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba( 0 0 0 / 50%);
+
+}
+.subscribe .container {
+    display: flex;
+    position: relative;
+    gap: 10px;
+    align-items: center;
+}
+@media(max-width: 992px) {
+    .subscribe .container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/*Or USe this only*/
+/* @media(min-width: 820px) {
+    .subscribe .container {
+        display: flex;
+    }
+} */
+.subscribe .container .form {
+    flex: 2;
+    display: flex;
+    border: 1px solid white;
+}
+.subscribe .container .form::before {
+    font-family: "Font Awesome 6 Free";
+    content: "\f0e0";
+    font-size: 27px;
+    align-self: center;
+    padding: 0 15px;
+    /* font-weight: 700; */
+    /* vertical-align: middle; */
+}
+.subscribe .container .form input[type="email"] {
+    width: calc(70%);
+    /* height: 100%; */
+    border: none;
+    padding: 20px;
+    background: none;
+    /* background-color: none; different from above */
+    color: white;
+    caret-color: var(--main-color);
+}
+.subscribe .container .form input::placeholder{
+    color: white;
+}
+.subscribe .container .form input[type="submit"] {
+    /* width: 30%; */
+    /* height: 100%; */
+    border: none;
+    background-color: var(--main-color);
+    color: white;
+    padding: 0 17px;
+    text-transform: capitalize;
+}
+.subscribe .container .form input[type="email"]:focus,
+.subscribe .container .form input[type="submit"]:focus {
+    outline: none;
+}
+.subscribe .container .text {
+    flex: 3;
+    line-height: 1.7;
+}
+@media(max-width: 992px) {
+    .subscribe .container .text {
+        margin: 30px 0 0 0;
+    }
+}
+/* contact */
+.contact {
+
+}
+.contact .container {
+
+}
+.contact .container .content {
+    display: flex;
+    gap: 30px;
+}
+@media(max-width: 727px) {
+    .contact .container .content {
+        flex-direction: column;
+    }
+    .contact .container .content .form { order: 1; }
+    .contact .container .content .address {
+        text-align: center;
+        order: 0;
+    }
+    /* in media 250px there is issue in width of inputs */
+}
+.contact .container .content .form {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.contact .container .content .form input,
+.contact .container .content .form textarea {
+    padding: 20px;
+    outline: none;
+    border: 1px solid #CCC;
+}
+.contact .container .form input[type="submit"] {
+    width: fit-content;
+    align-self: flex-end;
+    text-transform: uppercase;
+    background-color: var(--main-color);
+    border: none;
+    color: white;
+}
+.contact .container .content .address {
+    flex: 1;
+}
+.contact .container .content .address h3 {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+.contact .container .content .address h3:last-of-type {
+    margin: 70px 0 10px;
+}
+.contact .container .content .address :is(span, address){
+    display: block;
+    line-height: 2;
+    color: #a7a7a7;
+}
+
+/*
+    07:47 : display:flex; margin-left:auto;
+    to put the element in  right corner!
+    This awesome Technique i know
+
+*/
+
+.footer {
+    text-align: center;
+    padding: 30px 0;
+    background-image: url(../images/subscribe.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    /* line-height: 2; */
+    color: white;
+}
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba( 0 0 0 / 50%);
+}
+.footer * {
+    position: relative;
+}
+.footer img {
+    margin: 30px 0;
+}
+/* .footer .text { use this with margin-bottom for h3
+    width: fit-content;
+    margin: 30px auto;
+} */
+.footer .text h3 {
+    width: fit-content;
+    margin: 0 auto 20px;
+    /* margin-bottom: 20px; */
+    font-size: 20px;
+    padding: 20px;
+    border-bottom: 2px solid white;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+.footer .text ul {
+    list-style: none;
+}
+.footer ul li {
+    display: inline-block;
+    
+}
+.footer ul li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+}
+.footer .foot {
+    margin-top: 70px;
+}
+.footer .foot span {
+    color: var(--main-color);
+    font-weight: 700;
+}

@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google-fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,400&family=Poppins:ital,wght@0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+    <!-- Render all elements normally -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- font-aweomse libraray -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- main style page -->
+    <link rel="stylesheet" href="css/main.css">
+    <title>templete2</title>
+</head>
+<body>
+    <!-- header -->
+    <div class="header">
+        <div class="container">
+            <img src="images/logo.png" alt="logo">
+            <div class="links-tools">
+                <div class="menu">
+                    <i class="fa-solid fa-bars toggle-menu"></i> <!-- to independ on specific library 1:49 (alzero) -->
+                </div>
+                <ul class="links">
+                    <li><a href="#" class="home active">Home</a></li>
+                    <li><a href="#" class="services" >Services</a></li>
+                    <li><a href="#" class="portfolio" >Portfolio</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.header -->
+
+    <!-- landing -->
+    <main class="landing">
+        <div class="overlay"></div>
+        <div class="intro-landing">
+            <div class="txt">
+                <h2>
+                    Hello World! <br/>
+                    We Are Kasper We Make Art.
+                </h2>
+                <p>
+                    Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam. Accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.
+                </p>
+            </div>
+        </div>
+        <i class="fa-solid fa-arrow-left-long chng-background"></i>
+        <i class="fa-solid fa-arrow-right-long chng-background"></i>
+        <ul>
+            <li></li>
+            <li class="active"></li>
+            <li></li>
+        </ul>
+    </main>
+    <!-- /.landing -->
+    <div class="section services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-heading">services</h2>
+                <span class="line"></span>
+                <!--
+                    i can use before, after with h2 only without span
+                    ::before for line, ::after for circle in the middle (background like background's page)
+                    for decrease the elements in the website
+                -->
+                <p class="section-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo eum dicta provident ex nulla asperiores quis nostrum.</p>
+            </div> <!-- /.section-header -->
+            <div class="srv-contents">
+                <div class="srv-box">
+                    <i class="fas fa-desktop fa-3x"></i>
+                    <div class="text">
+                        <h3>title service</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam, voluptatem. Enim ipsum, obcaecati inventore perferendis itaque vero optio earum eos? Fugit animi, excepturi perspiciatis eum inventore fuga obcaecati rerum architecto.
+                        </p>
+                    </div>
+                </div><!-- /.srv-box -->
+                <div class="srv-box">
+                    <i class="fas fa-cog fa-3x"></i>
+                    <div class="text">
+                        <h3>title service</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam, voluptatem. Enim ipsum, obcaecati inventore perferendis itaque vero optio earum eos? Fugit animi, excepturi perspiciatis eum inventore fuga obcaecati rerum architecto.
+                        </p>
+                    </div>
+                </div><!-- /.srv-box -->
+                <div class="srv-box">
+                    <i class="fas fa-pencil-ruler fa-3x"></i>
+                    <div class="text">
+                        <h3>title service</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam, voluptatem. Enim ipsum, obcaecati inventore perferendis itaque vero optio earum eos? Fugit animi, excepturi perspiciatis eum inventore fuga obcaecati rerum architecto.
+                        </p>
+                    </div>
+                </div><!-- /.srv-box -->
+                <div class="srv-box">
+                    <i class="fas fa-user fa-3x"></i>
+                    <div class="text">
+                        <h3>title service</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam, voluptatem. Enim ipsum, obcaecati inventore perferendis itaque vero optio earum eos? Fugit animi, excepturi perspiciatis eum inventore fuga obcaecati rerum architecto.
+                        </p>
+                    </div>
+                </div><!-- /.srv-box -->
+            </div><!-- /.srv-contents -->
+        </div><!-- /.container -->
+    </div> <!-- /.services -->
+    <!-- design -->
+    <div class="section design">
+        <div class="section-header">
+            <h2 class="section-heading">design</h2>
+            <span class="line"></span>
+            <p class="section-desc">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates fuga totam
+            </p>
+        </div><!-- /.section-header -->
+        <div class="design-content">
+            <div class="img">
+                <img src="images/mobile.png" alt="mobile">
+            </div>
+            <div class="txt">
+                <h3>OUR DESIGN COMES WITH...title header</h3>
+                <ul>
+                    <li><i class="fas fa-desktop fa-3x"></i> Responsive Design</li>
+                    <li><i class="fas fa-desktop fa-3x"></i> Modern And Clean Design</li>
+                    <li><i class="fas fa-desktop fa-3x"></i> Clean Code</li>
+                    <li><i class="fas fa-desktop fa-3x"></i> Browser Friendly</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.design -->
+    <!-- portfolio -->
+    <div class="section portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-heading">portfolio</h2>
+                <span class="line"></span>
+                <p class="section-desc">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere earum voluptas quisquam provident nostrum alias aut veniam ut repellendus ratione aperiam similique rerum error, laudantium molestias odio, repellat deserunt dolorem?
+                </p>
+            </div>
+            <ul class="shuffle">
+                <li class="active">all</li>
+                <li>app</li>
+                <li>photo</li>
+                <li>web</li>
+                <li>print</li>
+            </ul>
+        </div><!-- /.container -->
+        <div class="img-container">
+            <div class="box">
+                <img src="images/shuffle-01.jpg" alt="">
+                <div class="caption">
+                    <h4>image awesome</h4>
+                    <p>photography</p>
+                </div>
+            </div><!-- /.box -->
+            <div class="box">
+                <img src="images/shuffle-02.jpg" alt="">
+                <div class="caption">
+                    <h4>image awesome</h4>
+                    <p>photography</p>
+                </div>
+            </div><!-- /.box -->
+            <div class="box">
+                <img src="images/shuffle-03.jpg" alt="">
+                <div class="caption">
+                    <h4>image awesome</h4>
+                    <p>photography</p>
+                </div>
+            </div><!-- /.box -->
+            <div class="box">
+                <img src="images/shuffle-04.jpg" alt="">
+                <div class="caption">
+                    <h4>image awesome</h4>
+                    <p>photography</p>
+                </div>
+            </div><!-- /.box -->
+            <div class="box">
+                <img src="images/shuffle-05.jpg" alt="">
+                <div class="caption">
+                    <h4>image awesome</h4>
+                    <p>photography</p>
+                </div>
+            </div><!-- /.box -->
+            <div class="box">
+                <img src="images/shuffle-06.jpg" alt="">
+                <div class="caption">
+                    <h4>image awesome</h4>
+                    <p>photography</p>
+                </div>
+            </div><!-- /.box -->
+            <div class="box">
+                <img src="images/shuffle-07.jpg" alt="">
+                <div class="caption">
+                    <h4>image awesome</h4>
+                    <p>photography</p>
+                </div>
+            </div><!-- /.box -->
+            <div class="box">
+                <img src="images/shuffle-08.jpg" alt="">
+                <div class="caption">
+                    <h4>image awesome</h4>
+                    <p>photography</p>
+                </div>
+            </div><!-- /.box -->
+        </div><!-- /.img-container -->
+        <a href="#" class="more">more</a>
+    </div>
+    <!-- /.portfolio -->
+
+    <!-- Video -->
+    <div class="video">
+        <video autoplay=true muted loop>
+            <source src="images/video1.mp4" type="video/mp4">
+        </video>
+        <div class="text">
+            <h2>super awesome video here</h2>
+            <p>Its All You Need</p>
+            <button>SEE MORE</button>
+        </div>
+    </div>
+    <!-- /.Video -->
+
+    <!-- about -->
+    <div class="section about">
+        <div class="section-header">
+            <h2 class="section-heading">about us</h2>
+            <span class="line"></span>
+            <p class="section-desc">Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.</p>
+        </div><!-- /.section-header -->
+        <div class="img">
+            <img src="images/about.png" alt="about picture">
+        </div>
+    </div>
+    <!-- /.about -->
+    <!-- statistics -->
+    <div class="statistics">
+        <div class="container">
+            <div class="box">
+                <i class="fa-solid fa-mug-hot"></i>
+                <span class="no-stat">1.236</span>
+                <span class="name-stat">Coffee Drinks</span>
+            </div>
+            <div class="box">
+                <i class="fa-solid fa-folder"></i>
+                <span class="no-stat">1.236</span>
+                <span class="name-stat">saved folders</span>
+            </div>
+            <div class="box">
+                <i class="fa-solid fa-envelope"></i>
+                <span class="no-stat">1.236</span>
+                <span class="name-stat">subscribtion</span>
+            </div>
+            <div class="box">
+                <i class="fa-solid fa-trophy"></i>
+                <span class="no-stat">1.236</span>
+                <span class="name-stat">prizes</span>
+            </div>
+        </div>
+    </div>
+    <!-- /.statistics -->
+    <!-- double-section -->
+    <div class="section double-section">
+        <div class="container">
+            <div class="testmonial">
+                <div class="section-header">
+                    <h2 class="section-heading">testmonial</h2>
+                    <p class="section-desc">Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.</p>
+                </div><!-- /.section-header -->
+
+                <div class="content-testmo">
+                    <div class="testm-box">
+                        <img src="images/skills-01.jpg" alt="person1">
+                        <div class="text">
+                            <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.</p>
+                            <span>John Doe, CEO</span>
+                        </div>
+                    </div>
+                    <div class="testm-box">
+                        <img src="images/skills-02.jpg" alt="person2">
+                        <div class="text">
+                            <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.</p>
+                            <span>John Doe, CEO</span>
+                        </div>
+                    </div>
+                    <div class="switch">
+                        <span class="active"></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div><!-- /.content-testmo -->
+            </div><!-- /.testmonial -->
+            <div class="skills">
+                <div class="section-header">
+                    <h2 class="section-heading">skills</h2>
+                    <p class="section-desc">Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.</p>
+                </div> <!-- /.section-header -->
+
+                <div class="skills-bars">
+                    <div class="bar-pkg">
+                        <h4>adobe</h4>
+                        <div class="bar adobe">
+                            <span data-progress="50%"></span>
+                        </div>
+                    </div>
+                    <div class="bar-pkg adobe">
+                        <h4>html & css</h4>
+                        <div class="bar html-css">
+                            <span data-progress="80%"></span>
+                        </div>
+                    </div>
+                    <div class="bar-pkg adobe">
+                        <h4>javascript</h4>
+                        <div class="bar js">
+                            <span data-progress="50%"></span>
+                        </div>
+                    </div>
+                    <div class="bar-pkg adobe">
+                        <h4>php</h4>
+                        <div class="bar php">
+                            <span data-progress="10%"></span>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.skills -->
+        </div>
+    </div>
+    <!-- /.double-section -->
+
+    <!-- Quote -->
+    <div class="quote">
+        <div class="container">
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est obcaecati quia officiis facere? Saepe non tempora laudantium repellendus, quibusdam deleniti facere qui architecto distinctio nulla, voluptate doloribus rerum odit provident.
+            </p>
+            <span>john doe</span>
+        </div>
+    </div>
+    <!-- /.Quote -->
+
+    <!-- pricing -->
+    <div class="section pricing">
+        <div class="section-header">
+            <h2 class="section-heading">pricing</h2>
+            <span class="line"></span>
+            <p class="section-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum qui rem corrupti in consequuntur quibusdam corporis esse repudiandae, fugiat, cum est aliquam nostrum alias, blanditiis quia odio reprehenderit illum magni.
+            </p>
+        </div>
+        <div class="container">
+            <div class="price-model">
+                <div class="plan">
+                    <h5 class="price-type">basic</h5>
+                    <p class="price">19</p>
+                </div>
+                <div class="features">
+                    <p>Feature No 1</p>
+                    <p>Extra Feature</p>
+                    <p>Extra Feature No 2</p>
+                    <p>Feature</p>
+                </div><!-- /.features -->
+                <button class="buy-btn">buy now</button>
+            </div><!-- /.price-model -->
+            <div class="price-model">
+                <div class="plan">
+                    <h5 class="price-type">premium</h5>
+                    <p class="price">27</p>
+                </div>
+                <div class="features">
+                    <!--
+                        We can replace p with ul li
+                        to be list (semantic)
+                    -->
+                    <p>Feature No 1</p>
+                    <p>Extra Feature</p>
+                    <p>Extra Feature No 2</p>
+                    <p>Feature</p>
+                </div><!-- /.features -->
+                <button class="buy-btn">buy now</button>
+            </div><!-- /.price-model -->
+            <div class="price-model">
+                <div class="plan">
+                    <h5 class="price-type">pro</h5>
+                    <p class="price">30</p>
+                </div>
+                <div class="features">
+                    <p>Feature No 1</p>
+                    <p>Extra Feature</p>
+                    <p>Extra Feature No 2</p>
+                    <p>Feature</p>
+                </div><!-- /.features -->
+                <button class="buy-btn">buy now</button>
+            </div><!-- /.price-model -->
+            <div class="price-model">
+                <div class="plan">
+                    <h5 class="price-type">platinum</h5>
+                    <p class="price">50</p>
+                </div>
+                <div class="features">
+                    <p>Feature No 1</p>
+                    <p>Extra Feature</p>
+                    <p>Extra Feature No 2</p>
+                    <p>Feature</p>
+                </div><!-- /.features -->
+                <button class="buy-btn">buy now</button>
+            </div><!-- /.price-model -->
+        </div><!-- /.container -->
+        <div class="text">
+            <p>
+                Contact us if you have special request
+            </p>
+            <a href="#">contact us</a>
+        </div>
+    </div><!-- /.pricing -->
+
+    <!-- subscribe -->
+    <div class="subscribe">
+        <div class="container">
+            <div class="form">
+                <input type="email" name="email" id="email" placeholder="Your Email">
+                <input type="submit" value="subscribe">
+            </div>
+            <div class="text">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa rerum perspiciatis temporibus architecto.
+            </div>
+        </div>
+    </div>
+    <!-- /.subscribe -->
+
+    <!-- contact us -->
+    <div class="section contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-heading">contact</h2>
+                <span class="line"></span>
+                <p class="section-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus, repudiandae.</p>
+            </div>
+            <div class="content">
+                <div class="form">
+                    <input type="text" name="name" id="name" placeholder="Your Name">
+                    <input type="email" name="email" id="email" placeholder="Your Email">
+                    <textarea name="message" id="msg" cols="30" rows="10" placeholder="Your Message"></textarea>
+                    <input type="submit" value="send message">
+                </div>
+                <div class="address">
+                    <h3>get in touch</h3>
+                    <span class="phone">+01092346077</span>
+                    <span class="phone">+01092346123</span>
+                    <h3>where we are</h3>
+                    <address>
+                        awesome address 17 <br>
+                        new york, NYC <br>
+                        123-1313-134 <br>
+                        USA
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.contact us -->
+
+    <!-- footer -->
+    <div class="footer">
+        <img src="images/logo.png" alt="logo"/>
+        <div class="text">
+            <h3>we are social</h3>
+            <ul class="social">
+                <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+            </ul>
+
+            <p class="foot">
+                &copy; 2021 <span>Kasper</span> All Right Reserved
+            </p>
+        </div>
+    </div>
+    <!-- /.footer -->
+    <script src="js/nav.js"></script>
+</body>
+</html>
